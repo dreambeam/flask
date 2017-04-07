@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+  </head>
+<body>
+
+  <form action="/upload " enctype="multipart/form-data" method="POST" name="upload_form">
+  
+    <div class="container">
+      <h1>File Input</h1>
+      <p>
+      Type the name of the file <br>
+      <input type="text" name="textline" size="30">
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Please specify a file, or a set of files:<br>
+        <input type="file" name="datafile" size="40">
+      </p>
+    </div>
+    <div> 
+      <input type="submit" value="Send">
+    </div>
+   </form>
+   <hr>
+
+    <form action="/download" enctype="multipart/form-data" method="POST, GET" name="download_form">
+    <div class="container">
+      <h1>File Output</h1>
+      <p>
+      Type the name of the file <br>
+      <input type="text" name="file_name" size="30">
+      </p>
+    </div>
+    <div> 
+      <input type="submit" value="Download">
+    </div>
+</body>
+</html>
